@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Acme Web Deisgn | Welcome</title>
+  </head>
+  <body onload="startTime()" style="background-image: url('u19.jpg'); background-size: 100% auto; background-repeat: no-repeat;">
+<link rel="stylesheet" href="./css/style.css">
+  	
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <br><br><br><br>
+      <li><a style="background-image: url('netgo.png');background-position: left; background-repeat: no-repeat; background-size: contain;padding-left: 300px; padding-bottom: 44px"></a></li>
+      <br><br>
+      <li><a href="https://vanila.io" target="_blank">Buy Tickets</a></li>
+      <li><a href="https://instagram.com/plavookac" target="_blank">My Tickets</a></li>
+      <li><a href="https://twitter.com/plavookac" target="_blank">Network Map</a></li>
+      <li><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">Service Status</a></li>
+      <li><a href="https://www.linkedin.com/in/plavookac/" target="_blank">Purchase History</a></li>
+      <li><a href="https://www.linkedin.com/in/plavookac/" target="_blank">Help</a></li>
+    </ul>
+  </div>
+  <h1></h1>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <center>
+  <p id='txt' style="font-size:44px; font-family:Roboto Mono; color:#0e2e2b;"></p>
+  </center>
+
+</body>
+
+<script>
+function startTime() {
+  const today = new Date();
+  const shortday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  const shortmonth = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  let d = today.getDate();
+  let month = shortmonth[today.getMonth()];
+  let day = shortday[today.getDay()];
+
+
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  day + " " + d + " " + month + " " + h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+
+</script>
+
+</html> 
