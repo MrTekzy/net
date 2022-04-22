@@ -67,7 +67,8 @@ body {
     color: #0e2e2b;
     font-weight: 400;
     padding-left: 80px;
-    padding-bottom: 66px;
+    padding-top: 33px;
+    padding-bottom: 33px;
     cursor: pointer;
     border-bottom: 2px solid rgba(255, 255, 255, 0.10);
 }
@@ -84,6 +85,18 @@ body {
     cursor: pointer;
     text-decoration: none;
 }
+.active {
+	background-color: rgba: 0,0,0,0.15;
+}
+.greyout {
+transition: all 0.3s;
+	background-color: rgba: 0,0,0,0;
+}
+input[type="checkbox"]:checked ~ #greyout {
+	transition: all 0.3s;
+	background-color: rgba: 0,0,0,0.5;
+}
+
 input[type="checkbox"]:checked ~ #sidebarMenu {
     transform: translateX(0);
 }
@@ -151,4 +164,3 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     transform: rotate(-135deg);
     margin-top: -18px;
 }
-input[type=checkbox]:checked{body}
