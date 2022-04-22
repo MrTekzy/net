@@ -34,12 +34,21 @@
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
   <center>
-  <p id='txt' style="font-size:44px; font-family:Roboto Mono; color:#0e2e2b;"></p>
+  <p id='livetime' style="font-size:40px; font-weight:600; font-family:Roboto Mono; color:#0e2e2b;"></p>
   </center>
- <br><br> <br> <br><br> <br><br> <br><br> <br><br>  <br><br><br> <br><br> <br><br> <br><br> <br><br>
+ <br>
+ <p style="font-size:20px"> </p>
+  <center>
+    <p id='createdtime' style="font-size:48px; font-weight:600; font-stretch:normal; font-family:Cabin; color:#ffffff;"></p>
+	</center>
+  <center>
+    <p id='expiretime' style="font-size:48px; font-weight:600; font-stretch:normal; font-family:Cabin; color:#ffffff;"></p>
+	</center>
+<br> <br><br>  <br><br><br> <br><br> <br><br> <br><br> <br>
+<p style="font-size:11px"> </p>
  <center>
  <div>
-  <img src="tram.gif" style="width:820px;height:126px;" onclick="this.src=this.src"/>
+  <img src="tram.jpg" style="width:820px;height:126px;" id="tramtap" onclick="doGif();"/>
   </div>
   </center>
 </body>
@@ -47,19 +56,22 @@
 <script>
 function startTime() {
   const today = new Date();
+  const hour = ["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"];
   const shortday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
   const shortmonth = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  let h = today.getHours();
+  let h = hour[today.getHours()];
   let m = today.getMinutes();
   let s = today.getSeconds();
   let d = today.getDate();
+  let y = today.getFullYear();  
   let month = shortmonth[today.getMonth()];
   let day = shortday[today.getDay()];
 
-
   m = checkTime(m);
   s = checkTime(s);
-  document.getElementById('txt').innerHTML =  day + " " + d + " " + month + " " + h + ":" + m + ":" + s;
+  document.getElementById('livetime').innerHTML =  day + " " + d + " " + month + " " + y + " " + h + ":" + m + ":" + s;
+  document.getElementById('createdtime').innerHTML =  day + "  " + d + "  " + month + "  " + y + "  07:39";
+  document.getElementById('expiretime').innerHTML =  tday + "  " + td + "  " + tmonth + "  " + ty + "  02:00";  
   setTimeout(startTime, 1000);
 }
 
@@ -68,6 +80,10 @@ function checkTime(i) {
   return i;
 }
 
+function doGif(){
+  document.getElementById("tramtap").src="tram.gif";
+  setTimeout(function(){ document.getElementById("tramtap").src="tram.jpg"; }, 3000);
+}
 </script>
 
 </html> 
