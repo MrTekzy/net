@@ -15,8 +15,6 @@
   <label for="openSidebarMenu" class="sidebarIconToggle">
 
   </label>
-  <div id="sidebarMenuGREY">
-  </div>
   <div id="sidebarMenu">
     <ul class="sidebarMenuInner">
       <br><br><br><br>
@@ -37,14 +35,14 @@
   <p id='livetime' style="font-size:40px; font-weight:600; font-family:Roboto Mono; color:#0e2e2b;"></p>
   </center>
  <br>
- <p style="font-size:20px"> </p>
+ <p style="font-size:8px"> </p>
   <center>
     <p id='createdtime' style="font-size:48px; font-weight:600; font-stretch:normal; font-family:Cabin; color:#ffffff;"></p>
 	</center>
   <center>
     <p id='expiretime' style="font-size:48px; font-weight:600; font-stretch:normal; font-family:Cabin; color:#ffffff;"></p>
 	</center>
-<br> <br><br>  <br><br><br> <br><br> <br><br> <br><br> <br>
+<br> <br><br>  <br><br> <br><br> <br><br> <br><br> <br>
 <p style="font-size:11px"> </p>
  <center>
  <div>
@@ -71,7 +69,7 @@ function startTime() {
   s = checkTime(s);
   document.getElementById('livetime').innerHTML =  day + " " + d + " " + month + " " + y + " " + h + ":" + m + ":" + s;
   document.getElementById('createdtime').innerHTML =  day + "  " + d + "  " + month + "  " + y + "  07:39";
-  document.getElementById('expiretime').innerHTML =  tday + "  " + td + "  " + tmonth + "  " + ty + "  02:00";  
+//  document.getElementById('expiretime').innerHTML =  tday + "  " + td + "  " + tmonth + "  " + ty + "  02:00";  
   setTimeout(startTime, 1000);
 }
 
