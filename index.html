@@ -35,14 +35,13 @@
   <p id='livetime' style="font-size:40px; font-weight:600; font-family:Roboto Mono; color:#0e2e2b;"></p>
   </center>
  <br>
- <p style="font-size:8px"> </p>
   <center>
     <p id='createdtime' style="font-size:48px; font-weight:600; font-stretch:normal; font-family:Cabin; color:#ffffff;"></p>
 	</center>
   <center>
     <p id='expiretime' style="font-size:48px; font-weight:600; font-stretch:normal; font-family:Cabin; color:#ffffff;"></p>
 	</center>
-<br> <br><br>  <br><br> <br><br> <br><br> <br><br> <br>
+<br> <br><br>  <br><br> <br>
 <p style="font-size:11px"> </p>
  <center>
  <div>
@@ -67,9 +66,7 @@ function startTime() {
   let day = shortday[today.getDay()];
   let tday = shortday[today.getDay() + 1];
   let td = today.getDate() + 1;
-  let tmonth = tshortmonth[today.getMonth() + 1];
-  
-
+  let tmonth = tshortmonth[today.getMonth() - 1];
   
   m = checkTime(m);
   s = checkTime(s);
