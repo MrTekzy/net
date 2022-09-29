@@ -2,6 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+#livetime{
+	margin-top: 735px;
+	text-align: center;
+}
+#createdtime{
+	margin-top: 33px;
+	text-align: center;
+}
+#expiretime{
+	margin-top: 86px;
+	text-align: center;
+}
+#tramtap{
+	margin-top: 118px;
+	z-index:70;
+}
+
 html, body {
     overflow-x: hidden;
     height: 100%;
@@ -27,6 +45,13 @@ body {
     height: 0px!important;
     overflow: hidden;
     z-index: 10;
+}
+.ticketcontainer {
+	color: black;
+	height:600px;
+	width: 100%;
+	z-index: 10;
+	top:1px;
 }
 .main {
     margin: 0 auto;
@@ -56,6 +81,7 @@ body {
     transform: translateX(-666px);
     transition: transform 300ms ease-out;
     background: #FFFFFF;
+	    z-index: 65;
 }
 .sidebarMenuInner{
     margin:0;
@@ -85,20 +111,29 @@ body {
     cursor: pointer;
     text-decoration: none;
 }
-.active {
-	background-color: rgba: 0,0,0,0.15;
+#active {
+	background-color: rgba(0,0,0,0.12);
 }
-.greyout {
+#greyout {
 transition: all 0.3s;
-	background-color: rgba: 0,0,0,0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 55;
+	position: absolute;
+	pointer-events:none;
 }
-input[type="checkbox"]:checked ~ #greyout {
+	input[type="checkbox"]:checked ~ #greyout {
 	transition: all 0.3s;
-	background-color: rgba: 0,0,0,0.5;
+	background-color: rgba(0,0,0,0.3);
+
 }
 
-input[type="checkbox"]:checked ~ #sidebarMenu {
+	input[type="checkbox"]:checked ~ #sidebarMenu {
     transform: translateX(0);
+}
+
+	input[type="checkbox"]:checked ~ #createdtime {
+    color: #ffffffcc;
 }
 
 input[type=checkbox] {
@@ -111,13 +146,13 @@ input[type=checkbox] {
     box-sizing: border-box;
     cursor: pointer;
     position: absolute;
-    z-index: 99;
+    z-index: 70;
     height: 100%;
     width: 100%;
-    top: 70px;
-    left: 30px;
-    height: 70px;
-    width: 70px;
+    top: 1.5vh;
+    left: 2.3vw;
+    height: 4vh;
+    width: 4vh;
 }
 .spinner {
     transition: all 0.3s;
