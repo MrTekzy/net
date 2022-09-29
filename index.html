@@ -6,9 +6,9 @@
     <title>NETGO!</title>
     <link rel="icon" type="image/x-icon" href="ng.ico">
     <meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="./css/style.css">
   </head>
-  <body id="greyout" onload="startTime()" style="background-image: url('u19.jpg'); background-size: 100% auto; background-repeat: no-repeat;">
-<link rel="stylesheet" href="./css/style.css">
+  <body onload="startTime()" style="background-image: url('u19.jpg'); background-size: 100% auto; background-repeat: no-repeat;">
 
   	
   <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
@@ -28,26 +28,31 @@
       <li><a href="https://www.linkedin.com/in/plavookac/">Help</a></li>
     </ul>
   </div>
+ <div id="greyout"></div>
+<div class="ticketcontainer">
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 
   <center>
   <p id='livetime' style="font-size:40px; font-weight:600; font-family:Roboto Mono; color:#0e2e2b;"></p>
   </center>
  <br>
   <center>
-    <p id='createdtime' style="font-size:48px; font-weight:600; font-stretch:normal; font-family:Cabin; color:#ffffff;"></p>
+    <p id='createdtime' style="z-index:1; font-size:48px; font-weight:600; font-stretch:normal; font-family:Cabin; color:#ffffffdb;"></p>
 	</center>
   <center>
-    <p id='expiretime' style="font-size:48px; font-weight:600; font-stretch:normal; font-family:Cabin; color:#ffffff;"></p>
+    <p id='expiretime' style="font-size:48px; font-weight:600; font-stretch:normal; font-family:Cabin; color:#ffffffdb;"></p>
 	</center>
-<br> <br><br>  <br><br> <br>
 <p style="font-size:11px"> </p>
  <center>
  <div>
   <img src="tram.jpg" style="width:820px;height:126px;" id="tramtap" onclick="doGif();"/>
   </div>
-  </center>
+ </center>
+	
+</div>
+  
+
 </body>
 
 <script>
@@ -72,7 +77,7 @@ function startTime() {
   s = checkTime(s);
   document.getElementById('livetime').innerHTML =  day + " " + d + " " + month + " " + y + " " + h + ":" + m + ":" + s;
   document.getElementById('createdtime').innerHTML =  day + "  " + d + "  " + month + "  " + y + "  07:39";
-  document.getElementById('expiretime').innerHTML =  tday + "  " + td + "  " + tmonth + "  " + y + "  02:00";
+  document.getElementById('expiretime').innerHTML =  tday + "  " + td + "  " + month + "  " + y + "  02:00";
   setTimeout(startTime, 1000);
 }
 
