@@ -8,16 +8,20 @@
 	text-align: center;
 }
 #createdtime{
-	margin-top: 33px;
+	margin-top: 31px;
 	text-align: center;
 }
 #expiretime{
-	margin-top: 86px;
+	margin-top: 84px;
 	text-align: center;
 }
 #tramtap{
 	margin-top: 118px;
 	z-index:70;
+}
+#HMSremaining{
+	margin-top: 14px;
+	text-align: center;
 }
 
 html, body {
