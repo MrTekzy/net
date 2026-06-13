@@ -10,7 +10,7 @@ THIS PROJECT IS FOR PERSONAL EDUCATIONAL PURPOSES AND IS NOT INTENDED FOR OFFICI
     <title>NETGO!</title>
     <link rel="icon" type="image/x-icon" href="ng.ico">
 	<link rel="apple-touch-icon" href="ng.ico"> 
-	<meta name="apple-mobile-web-app-title, content="NETGO!, user-scalable=no">
+	<meta name="apple-mobile-web-app-title, content="NETGO!, user-scalable=no, maximum-scale=1.0">
 	<link rel="stylesheet" href="./css/style.css">
   </head>
   <body onload="startTime()" style="background-image: url('Screenshot_20230610_212542_NETGO!.jpg'); background-size: 100% auto; background-repeat: no-repeat;">
@@ -118,6 +118,18 @@ function doGif(){
   document.getElementById("tramtap").src="tram.gif";
   setTimeout(function(){ document.getElementById("tramtap").src="tram.jpg"; }, 3000);
 }
+
+// Prevent zooming with more than one finger
+document.addEventListener('touchstart', function(e) {
+    if (e.touches.length > 1) {
+        e.preventDefault(); // Prevent zoom
+    }
+}, { passive: false });
+
+// Prevent pinch zooming with gestures
+document.addEventListener('gesturestart', function(e) {
+    e.preventDefault(); // Prevent zoom gesture
+}, { passive: false });
 </script>
 
 </html> 
